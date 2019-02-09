@@ -1,5 +1,14 @@
-com\orestonatsko\springpetclinic\model\Pet.class
-com\orestonatsko\springpetclinic\model\Owner.class
 com\orestonatsko\springpetclinic\model\Vet.class
 com\orestonatsko\springpetclinic\model\Person.class
+com\orestonatsko\springpetclinic\services\CrudService.class
+com\orestonatsko\springpetclinic\services\VetService.class
+com\orestonatsko\springpetclinic\services\map\PetServiceMap.class
+com\orestonatsko\springpetclinic\services\map\VetServiceMap.class
+com\orestonatsko\springpetclinic\services\PetService.class
+com\orestonatsko\springpetclinic\services\OwnerService.class
+com\orestonatsko\springpetclinic\model\Pet.class
+com\orestonatsko\springpetclinic\services\map\OwnerServiceMap.class
 com\orestonatsko\springpetclinic\model\PetType.class
+com\orestonatsko\springpetclinic\services\map\AbstractMapService.class
+com\orestonatsko\springpetclinic\model\Owner.class
+com\orestonatsko\springpetclinic\model\BaseEntity.class

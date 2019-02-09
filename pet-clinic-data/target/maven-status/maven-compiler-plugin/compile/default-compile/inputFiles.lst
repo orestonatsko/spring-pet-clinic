@@ -1,5 +1,14 @@
 C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\model\PetType.java
 C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\model\Vet.java
+C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\services\map\OwnerServiceMap.java
+C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\model\BaseEntity.java
 C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\model\Owner.java
 C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\model\Person.java
+C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\services\map\VetServiceMap.java
+C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\services\VetService.java
+C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\services\CrudService.java
+C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\services\map\AbstractMapService.java
+C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\services\OwnerService.java
+C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\services\PetService.java
+C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\services\map\PetServiceMap.java
 C:\Learning Spring\projects\spring-pet-clinic\pet-clinic-data\src\main\java\com\orestonatsko\springpetclinic\model\Pet.java
