@@ -1,0 +1,4 @@
+com\orestonatsko\springpetclinic\controllers\OwnerController.class
+com\orestonatsko\springpetclinic\controllers\IndexController.class
+com\orestonatsko\springpetclinic\controllers\VetController.class
+com\orestonatsko\springpetclinic\SpringPetClinicApplication.class
