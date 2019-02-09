@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class PetTypeServiceMap extends AbstractMapService<PetType, Long> implements PetTypeService {
     @Override
-    public PetType findById(Long id) {
+    public PetType  findById(Long id) {
         return super.findBId(id);
     }
 
