@@ -44,7 +44,7 @@ public class DataLoader implements CommandLineRunner {
         vet2.setLastName("Kerch");
         Speciality speciality2= new Speciality();
         speciality2.setDescription("surgery");
-        vet2.getSpecialities().a    dd(speciality1);
+        vet2.getSpecialities().add(speciality1);
         vetService.save(vet2);
 
         Vet vet3 = new Vet();
