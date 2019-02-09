@@ -1,0 +1,5 @@
+com\orestonatsko\springpetclinic\model\Pet.class
+com\orestonatsko\springpetclinic\model\Owner.class
+com\orestonatsko\springpetclinic\model\Vet.class
+com\orestonatsko\springpetclinic\model\Person.class
+com\orestonatsko\springpetclinic\model\PetType.class
