@@ -1,9 +1,6 @@
 package com.orestonatsko.springpetclinic.bootstrap;
 
-import com.orestonatsko.springpetclinic.model.Owner;
-import com.orestonatsko.springpetclinic.model.Pet;
-import com.orestonatsko.springpetclinic.model.PetType;
-import com.orestonatsko.springpetclinic.model.Vet;
+import com.orestonatsko.springpetclinic.model.*;
 import com.orestonatsko.springpetclinic.services.OwnerService;
 import com.orestonatsko.springpetclinic.services.PetTypeService;
 import com.orestonatsko.springpetclinic.services.VetService;
@@ -35,6 +32,9 @@ public class DataLoader implements CommandLineRunner {
         vet1.setId(1L);
         vet1.setFirstName("Karl");
         vet1.setLastName("Mensh");
+        Speciality speciality1= new Speciality();
+        speciality1.setDescription("dentistry");
+        vet1.getSpecialities().add(speciality1);
 
         vetService.save(vet1);
 
@@ -42,21 +42,18 @@ public class DataLoader implements CommandLineRunner {
         vet2.setId(2L);
         vet2.setFirstName("Ira");
         vet2.setLastName("Kerch");
-
+        Speciality speciality2= new Speciality();
+        speciality2.setDescription("surgery");
+        vet2.getSpecialities().a    dd(speciality1);
         vetService.save(vet2);
 
         Vet vet3 = new Vet();
         vet3.setId(3L);
         vet3.setFirstName("Oleh");
         vet3.setLastName("Gorniy");
-
-        vetService.save(vet3);
-
-        Vet vet4 = new Vet();
-        vet4.setId(4L);
-        vet4.setFirstName("Stas");
-        vet4.setLastName("Derish");
-
+        Speciality speciality3= new Speciality();
+        speciality3.setDescription("radiology");
+        vet3.getSpecialities().add(speciality3);
         vetService.save(vet3);
     }
 
