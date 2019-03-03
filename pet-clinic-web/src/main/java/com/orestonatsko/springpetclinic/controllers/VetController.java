@@ -3,10 +3,9 @@ package com.orestonatsko.springpetclinic.controllers;
 import com.orestonatsko.springpetclinic.services.VetService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-@RequestMapping("/vets")
 public class VetController {
 
     private VetService vetService;
@@ -15,7 +14,7 @@ public class VetController {
         this.vetService = vetService;
     }
 
-    @RequestMapping({"", "/", "/index", "/index.html"})
+    @GetMapping({"/vets", "/vets/", "/vets/index", "/vets/index.html", "vets.html"})
     public String vets(Model model){
         model.addAttribute("vets", vetService.findAll());
         return "vets/index";
