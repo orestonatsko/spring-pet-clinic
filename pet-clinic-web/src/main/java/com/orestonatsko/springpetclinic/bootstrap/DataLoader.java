@@ -23,8 +23,11 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        createOwnersAndPets();
-        createVets();
+        int count = petTypeService.findAll().size();
+        if (count == 0) {
+            createOwnersAndPets();
+            createVets();
+        }
     }
 
     private void createVets() {
@@ -32,17 +35,18 @@ public class DataLoader implements CommandLineRunner {
         vet1.setId(1L);
         vet1.setFirstName("Karl");
         vet1.setLastName("Mensh");
-        Speciality speciality1= new Speciality();
+        Speciality speciality1 = new Speciality();
+        speciality1.setId(1L);
         speciality1.setDescription("dentistry");
         vet1.getSpecialities().add(speciality1);
-
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
         vet2.setId(2L);
         vet2.setFirstName("Ira");
         vet2.setLastName("Kerch");
-        Speciality speciality2= new Speciality();
+        Speciality speciality2 = new Speciality();
+        speciality2.setId(2L);
         speciality2.setDescription("surgery");
         vet2.getSpecialities().add(speciality1);
         vetService.save(vet2);
@@ -51,13 +55,16 @@ public class DataLoader implements CommandLineRunner {
         vet3.setId(3L);
         vet3.setFirstName("Oleh");
         vet3.setLastName("Gorniy");
-        Speciality speciality3= new Speciality();
+        Speciality speciality3 = new Speciality();
+        speciality3.setId(3L);
         speciality3.setDescription("radiology");
         vet3.getSpecialities().add(speciality3);
         vetService.save(vet3);
+
+        System.out.println("Loaded Vets...");
     }
 
-    private  void createOwnersAndPets() {
+    private void createOwnersAndPets() {
         Owner owner1 = new Owner();
         owner1.setId(1L);
         owner1.setFirstName("Orest");
@@ -66,9 +73,11 @@ public class DataLoader implements CommandLineRunner {
         owner1.setCity("Lviv");
         owner1.setTelephone("0567865434");
         ownerService.save(owner1);
+
         PetType dog = new PetType();
+        dog.setId(1L);
         dog.setName("dog");
-        createPet(owner1, dog, "Rob");
+        createPet(owner1, dog, "Rob", 1L);
 
 
         Owner owner2 = new Owner();
@@ -81,9 +90,9 @@ public class DataLoader implements CommandLineRunner {
         ownerService.save(owner2);
 
         PetType cat = new PetType();
+        cat.setId(2L);
         cat.setName("cat");
-        PetType savedCatPetType = petTypeService.save(cat);
-        createPet(owner2, cat, "Dolly");
+        createPet(owner2, cat, "Dolly", 2L);
 
         Owner owner3 = new Owner();
         owner3.setId(3L);
@@ -93,14 +102,20 @@ public class DataLoader implements CommandLineRunner {
         owner3.setCity("Lviv");
         owner3.setTelephone("0632456464");
         ownerService.save(owner3);
+
         PetType rabbit = new PetType();
+        rabbit.setId(3L);
         rabbit.setName("rabbit");
-        createPet(owner3, rabbit, "Some rabbit");
+        createPet(owner3, rabbit, "Some rabbit",3L);
+
+        System.out.println("Loaded Owners and Pets...");
+
     }
 
-    private void createPet(Owner owner, PetType petType, String petName) {
+    private void createPet(Owner owner, PetType petType, String petName, Long petId) {
         petTypeService.save(petType);
         Pet pet = new Pet();
+        pet.setId(petId);
         pet.setName(petName);
         pet.setPetType(petType);
         owner.getPets().add(pet);
