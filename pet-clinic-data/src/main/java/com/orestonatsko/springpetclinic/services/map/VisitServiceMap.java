@@ -1,7 +1,7 @@
 package com.orestonatsko.springpetclinic.services.map;
 
 import com.orestonatsko.springpetclinic.model.Visit;
-import com.orestonatsko.springpetclinic.services.springdatajpa.VisitService;
+import com.orestonatsko.springpetclinic.services.VisitService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
