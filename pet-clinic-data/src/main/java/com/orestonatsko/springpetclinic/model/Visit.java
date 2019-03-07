@@ -1,8 +1,14 @@
 package com.orestonatsko.springpetclinic.model;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
+
+@EqualsAndHashCode(callSuper = true)
+@Data
 @Entity
 @Table(name = "visit")
 public class Visit extends BaseEntity {
@@ -18,27 +24,4 @@ public class Visit extends BaseEntity {
     private Pet pet;
 
 
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Pet getPet() {
-        return pet;
-    }
-
-    public void setPet(Pet pet) {
-        this.pet = pet;
-    }
 }
